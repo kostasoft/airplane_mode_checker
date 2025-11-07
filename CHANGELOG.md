@@ -62,3 +62,27 @@
 **Updates:**
 
 - New feature `AirplaneModeChecker.instance.listenAirplaneMode()` for request (https://github.com/14h4i/airplane_mode_checker/issues/16)
+
+## 3.2.0
+
+**Updates:**
+
+- **iOS improvements:**
+  - Fixed airplane mode detection logic for better accuracy on cellular devices
+  - Added proper memory leak prevention with deinit
+  - Improved timer handling to work correctly during UI interactions
+  - Added Network framework import for future enhancements
+  - Better handling of WiFi-only devices (iPad WiFi, iPod Touch)
+  - Updated minimum iOS version to 12.0
+
+- **Android improvements:**
+  - Updated Gradle to 8.2.2 (from 7.3.0)
+  - Updated Kotlin to 1.9.22 (from 1.7.10)
+  - Updated compileSdk to 35 (Android 15)
+  - Updated Mockito to 5.10.0 for better testing
+
+- **General improvements:**
+  - Updated plugin_platform_interface to ^2.1.0
+  - Added package topics for better discoverability on pub.dev
+  - Improved code quality and documentation
+  - Updated podspec with proper metadata

@@ -1,6 +1,13 @@
 group 'com.u14h4i.airplane_mode_checker'
 version '1.1'
 
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // id "dev.flutter.flutter-gradle-plugin"
+    id "org.jetbrains.kotlin.android"
+}
+
 buildscript {
     ext.kotlin_version = '2.2.20'
     repositories {
@@ -9,10 +16,10 @@ buildscript {
         gradlePluginPortal()
     }
 
-    dependencies {
-        classpath 'com.android.tools.build:gradle:9.2.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
+    // dependencies {
+    //     classpath 'com.android.tools.build:gradle:9.2.1'
+    //     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    // }
 }
 
 rootProject.allprojects {
@@ -23,7 +30,7 @@ rootProject.allprojects {
     }
 }
 
-apply plugin: 'com.android.library'
+// apply plugin: 'com.android.library'
 // apply plugin: 'kotlin-android'
 
 android {
@@ -40,6 +47,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 // android {
